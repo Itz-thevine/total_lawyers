@@ -1,0 +1,366 @@
+:root {
+    --primary-color: #2376FF;
+    --secondary-color: #F8F8F8;
+    --text-color: #333333;
+    --background-color: #ffffff;
+    --button-color: #F3AA50;
+    --button-hover-color: #ff8c00;
+
+    --font-size-xl: 1.75rem;
+    --font-size-lg: 1.125rem;
+    --font-size-md: 1rem;
+    --font-size-sm: 0.8rem;
+    
+    --line-height-h1: 1.875rem;
+    --line-height-p: 1.313rem;
+    
+    --font-weight-p: 400;
+    --font-weight-label: 600;
+    
+    --gap-2xl: 2.5rem;
+    --gap-xl: 2rem;
+    --gap-lg: 1.5rem;
+    --gap-md: 1rem;
+    
+    --padding: 4rem;
+    --padding-small: 1.625rem;
+    --border-radius: 5px;
+    --small-radius: 2rem;
+
+    --content-width: 65%;
+    --footer-width: 70%;
+}
+
+.d-flex { display: flex; }
+.flex-column { flex-direction: column; }
+.flex-row { flex-direction: row; }
+.justify-center { justify-content: center; }
+.justify-space-between { justify-content: space-between; }
+.align-center { align-items: center; }
+
+.gap-1 { gap: 0.75rem; }
+.gap-md { gap: var(--gap-md); }
+.gap-lg { gap: var(--gap-lg); }
+.gap-xl { gap: var(--gap-xl); }
+.gap-2xl { gap: var(--gap-2xl); }
+
+.w-available { width: -webkit-fill-available; }
+.w-50 { width: 50%; }
+.w-100 { width: 100%; }
+
+.font-16 { font-size: var(--font-size-md); }
+.color-primary { color: var(--primary-color); }
+.text-underline { text-decoration: underline; }
+.margin-0 { margin: 0; }
+.overflow-x-hidden { overflow-x: hidden; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.bg-white { background-color: #fff; }
+
+body {
+    font-family: "Public Sans", sans-serif;
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    background-image: url('/assets/images/desktop-20-bill-bg-ssdi-api4-lander\ 1.png'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    color: var(--text-color);
+    min-height: 80vh;
+    gap: var(--gap-xl);
+    padding: var(--padding) 0;
+    width: 100%;
+}
+
+.content {
+    max-width: var(--content-width);
+}
+
+.content-details {
+    padding: 40px 24px;
+    background-color: var(--secondary-color);   
+    width: 45%;
+}
+
+.content-details h1 {
+    color: var(--text-color);
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-h1);
+}
+
+.h1-decoration {
+    background-color: var(--primary-color);
+    height: 5px;
+    width: 50px;
+    border-radius: var(--small-radius);
+    margin: 0.75rem 0 1rem;
+}
+
+p {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-p);
+    font-weight: var(--font-weight-p);
+}
+
+.content-details-bottom {
+    height: 13.25rem;
+    gap: 0.625rem;
+    width: 100%;
+}
+
+.badges {
+    margin: 20px 0;
+    width: 342px;
+}
+
+.stepper-form {
+    padding: 40px 40px 120px;
+}
+
+label {
+    display: block;
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-p);
+    font-weight: var(--font-weight-label);
+    margin-bottom: 16px;
+}
+
+select {
+    border: 1px solid #006FBB;
+    border-radius: var(--border-radius);
+    padding: 12px 16px;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-label);
+    appearance: none;
+    background-image: url('/assets/images/chevron-down-solid.png');
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px 16px;
+}
+
+.radio-group div {
+    display: flex;
+    align-items: center;
+    border: 2px solid #E1E1E1;
+    width: 100%;
+    gap: 16px;
+    border-radius: 5px;
+    padding: 12px 24px;
+}
+
+.radio-group label {
+    margin: 0;
+}
+
+.radio-group input {
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    display: flex;
+    align-items: center;
+    border: 2px solid #E1E1E1;
+    border-radius: 5px;
+    padding: 12px 16px;
+}
+
+input[type="text"]::placeholder {
+    size: 48px;
+    line-height: 27px;
+}
+
+textarea {
+    resize: none;
+    height: 173px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.25em;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: var(--padding-small) 0;
+    background-image: url('/assets/images/desktop-20-bill-bg-ssdi-api4-lander\ 1.png');
+    overflow-x: hidden;
+}
+
+footer p {
+    width: var(--footer-width);
+    margin: 5px 0;
+    font-size: var(--font-size-sm);
+}
+
+.step {
+    display: none;
+}
+
+.step div > p {
+    font-size: 12px;
+}
+
+.step.active {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.step-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.step-navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.step-navigation button {
+    padding: 15px;
+    background-color: var(--button-color);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.step-navigation button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.hide-web {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .container {
+        padding-top: 32px;
+        width: auto;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .hide-web {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content-details {
+        padding: 2rem 1rem;
+        gap: 2rem;
+        width: fit-content;
+    }
+
+    .stepper-form {
+        padding: 2.5rem 1rem 0;
+    }
+
+    footer p {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: auto;
+    }
+
+    .content-details {
+        padding: 1rem 0.75rem;
+        gap: 1rem;
+        background-color: #fff;
+    }
+
+    .content-details-bottom {
+        height: auto;
+        margin-top: 24px;
+        padding: 1rem;
+    }
+
+    .content-details-bottom p {
+        text-align: left;
+        width: 324px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .container {
+        padding-top: 32px;
+        overflow-x: hidden;
+    }
+
+    .content {
+        max-width: 100%;
+        margin: 16px;
+        display: flex;
+        align-self: center;
+    }
+
+    .content-details {
+        padding: 1rem 0.75rem;
+        gap: 1rem;
+        background-color: #fff;
+        width: fit-content;
+    }
+
+    .stepper-form {
+        padding: 2.5rem 1rem 0;
+    }
+
+    .h1-decoration {
+        display: none;
+    }
+
+    .content-details div + p {
+        margin-top: 16px;
+    }
+
+    footer {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .footer p {
+        width: 80%;
+    }
+}

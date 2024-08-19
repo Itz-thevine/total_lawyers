@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Lawyers</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="margin-0 overflow-x-hidden">
+    <main class="container  text-center d-flex justify-center align-center flex-column">
+        <img src="/assets/images/total-lawyers-logo-white-min 1.png" alt="Total Lawyers" height="36" width="206">
+        <div class="content d-flex flex-row bg-white">
+            <div class="content-details gap-2xl  d-flex flex-column text-left ">
+                <div>
+                    <h1 class="margin-0 text-left">Get a 100% Free Consult for Up to $3,822/Month in Disability Benefits</h1>
+                    <div class="h1-decoration"></div>
+                    <p class="margin-0">Answer a few questions to get started.</p>
+                </div>
+                
+                <div class="content-details-bottom hide-mobile">
+                    <p class="margin-0 w-100">Join over 1M+ others who chose us to connect with a lawyer — for free.</p>
+                    <div class="badges d-flex justify-between align-center gap-xl">
+                        <img src="assets/images/google-stars.png" alt="Google stars" width="128" height="16"/>
+                        <img src="assets/images/norton-secured.png" alt="Norton Secured" width="59" height="34" />
+                        <img src="assets/images/accredited-business.png" alt="BBB Accredited" width="89" height="34" />
+                    </div>
+                </div>
+            </div>
+            <form id="stepper-form" class="stepper-form text-left d-flex flex-column">
+                <div class="step active" id="step-1">
+                    <div class="step-container">
+                        <div>
+                            <label for="age">1. How old are you?</label>
+                            <select id="age" name="age" class="w-100" >
+                                <option>Select an answer</option>
+                                <option value="18-24">18-24</option>
+                                <option value="25-34">25-34</option>
+                                <option value="35-44">35-44</option>
+                                <option value="45-54">45-54</option>
+                                <option value="55-64">55-64</option>
+                                <option value="65+">65+</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>2. Do you expect to be out of work for at least a year due to your health?</label>
+                            <div class="radio-group d-flex justify-between gap-lg">
+                                <div>
+                                    <input type="radio" class="margin-0" id="work-yes" name="work" value="yes">
+                                    <label for="work-yes">Yes</label>
+                                </div>
+                                <div>
+                                    <input type="radio" class="margin-0" id="work-no" name="work" value="no">
+                                    <label for="work-no">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-navigation">
+                        <button type="button" id="nextBtn" onclick="next(1)">Next Step</button>
+                    </div>
+                </div>
+
+                <div class="step" id="step-2">
+                    <div class="step-container">
+                        <div>
+                            <label>3. Have you been treated by a doctor, hospital, or clinic in the last year?</label>
+                            <div class="radio-group d-flex justify-between gap-lg">
+                                <div>
+                                    <input type="radio" class="margin-0" id="treated-yes" name="treated" value="yes">
+                                    <label for="treated-yes">Yes</label>
+                                </div>
+                                <div>
+                                    <input type="radio" class="margin-0" id="treated-no" name="treated" value="no">
+                                    <label for="treated-no">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label>4. Have you had a full-time job within the past 5 years?</label>
+                            <div class="radio-group d-flex justify-between gap-lg">
+                                <div>
+                                    <input type="radio" class="margin-0" id="job-yes" name="job" value="yes">
+                                    <label for="job-yes">Yes</label>
+                                </div>
+                                <div>
+                                    <input type="radio" class="margin-0" id="job-no" name="job" value="no">
+                                    <label for="job-no">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-navigation">
+                        <button type="button" id="nextBtn" onclick="next(1)">Next Step</button>
+                    </div>
+                </div>
+
+                <div class="step" id="step-3">
+                    <div class="step-container">
+                        <div>
+                            <label>5. Do you already receive Social Security benefits?</label>
+                            <div class="radio-group d-flex justify-between gap-lg">
+                                <div>
+                                    <input type="radio" class="margin-0" id="benefits-yes" name="benefits" value="yes">
+                                    <label for="benefits-yes">Yes</label>
+                                </div>
+                                <div>
+                                    <input type="radio" class="margin-0" id="benefits-no" name="benefits" value="no">
+                                    <label for="benefits-no">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label>6. Have you hired an advocate or attorney to help get benefits?</label>
+                            <div class="radio-group d-flex justify-between gap-lg">
+                                <div>
+                                    <input type="radio" class="margin-0" id="attorney-yes" name="attorney" value="yes">
+                                    <label for="attorney-yes">Yes</label>
+                                </div>
+                                <div>
+                                    <input type="radio" class="margin-0" id="attorney-no" name="attorney" value="no">
+                                    <label for="attorney-no">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-navigation">
+                        <button type="button" id="nextBtn" onclick="next(1)">Next Step</button>
+                    </div>
+                </div>
+
+                <div class="step" id="step-4">
+                    <div class="step-container">
+                        <div>
+                            <label for="zip">7. What’s your zip code?</label>
+                            <input type="text" id="zip" name="zip" class="w-available">
+                        </div>
+                        <div>
+                            <label for="conditions">8. Please briefly list the health conditions that prevent you from working.</label>
+                            <textarea id="conditions" class="d-flex align-center w-available" name="conditions" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="step-navigation">
+                        <button type="button" id="nextBtn" onclick="next(1)">Last Step</button>
+                        <p class="margin-0">You should not send any sensitive or confidential information through this site. Any information sent through this site does not create an attorney-client relationship and may not be treated as privileged or confidential. The lawyer or law firm you are contacting is not required to, and may choose not to, accept you as a client. The Internet is not necessarily secure and emails sent through this site could be intercepted or read by third parties.</p>
+                    </div>
+                </div>
+
+                <div class="step" id="step-5">
+                    <div class="step-container">
+                        <h2 class="font-16 w-available d-flex justify-center">We found 1 SSDI lawyer in your area!</h2>
+                        <div class="d-flex flex-column">
+                            <label for="name">What’s your full name?</label>
+                            <div class="d-flex gap-2 w-available gap-md">
+                                <input type="text" class="w-50" id="name" name="name" placeholder="First Name">
+                                <input type="text" class="w-50" id="name" name="name" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="phone">What’s your telephone number?</label>
+                            <input type="tel" id="phone" name="phone" class="w-available">
+                        </div>
+                        <div>
+                            <label for="email">What’s your email address?</label>
+                            <input type="email" id="email" name="email" class="w-available">
+                        </div>
+                    </div>
+                    <div class="step-navigation">
+                        <button type="button" id="nextBtn" onclick="next(1)">Get Free Consult</button>
+                        <p class="margin-0">By submitting this form I agree to the <span class="color-primary text-underline">Terms of Use</span> and <span class="color-primary text-underline">Privacy Policy</span> and consent to be contacted by Martindale-Nolo and its affiliates, and up to three attorneys regarding this request and to receiving relevant marketing messages by automated means, text and/or prerecorded messages at the number provided. Consent is not required as a condition of service,  <span class="color-primary text-underline">Click Here</span> to agree without providing consent to be contacted by automated means, text and/or prerecorded messages. Rates may apply.</p>
+                    </div>
+                </div>
+
+                
+            </form>
+            <div class="content-details-bottom hide-web">
+                <p class="margin-0 ">Join over 1M+ others who chose us to connect with a lawyer — for free.</p>
+                <div class="badges d-flex justify-between align-center gap-xl">
+                    <img src="assets/images/google-stars.png" alt="Google stars" width="128" height="16"/>
+                    <img src="assets/images/norton-secured.png" alt="Norton Secured" width="59" height="34" />
+                    <img src="assets/images/accredited-business.png" alt="BBB Accredited" width="89" height="34" />
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="margin-0">Copyright © 2024 MH Sub I, LLC dba Nolo ® Self-help services may not be permitted in all states. The information provided on this site is not legal advice, does not constitute a lawyer referral service, and no attorney-client or confidential relationship is or will be formed by use of the site. The attorney listings on this site are paid attorney advertising. In some states, the information on this website may be considered a lawyer referral service. Please reference the Terms of Use and the Supplemental Terms for specific information related to your state. Your use of this website constitutes acceptance of the Terms of Use, Supplemental Terms, IB Privacy Policy and Cookie Policy.</p>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
