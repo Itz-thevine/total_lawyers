@@ -11,10 +11,6 @@ You can view the live website here: [Total Lawyers Live Site](https://totallawye
 - [Project Overview](#project-overview)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Project Overview
 
