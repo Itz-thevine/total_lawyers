@@ -280,6 +280,8 @@ footer p {
 }
 
 /* Responsive Styles */
+
+
 @media (max-width: 1024px) {
     .container {
         padding-top: 32px;
@@ -395,6 +397,10 @@ footer p {
 
     .content-details div + p {
         margin-top: 16px;
+    }
+
+    .badges{
+        gap: 1.3rem
     }
 
     footer {
