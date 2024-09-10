@@ -414,3 +414,13 @@ footer p {
         margin-bottom: 24px;
     }
 }
+
+@media (max-width: 350px) {
+    .badges{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+}
