@@ -3,14 +3,17 @@ showStep(currentStep);
 
 function showStep(n) {
     const steps = document.getElementsByClassName("step");
-    steps[n].classList.add("active");
+    const desc = document.getElementById("desc");
+    const formTopPadding = document.getElementsByClassName("stepper-form");
 
-    if (n == 0) {
-        document.getElementById("prevBtn").style.display = "none";
-    } else {
-        document.getElementById("prevBtn").style.display = "inline";
+    if (n === 4) {
+        desc.innerText = 'Enter your details for a free consult.'
+        formTopPadding[0].style.paddingTop = "24px";    
     }
 
+    steps[n].classList.add("active");
+
+   
     if (n == (steps.length - 1)) {
         document.getElementById("nextBtn").innerHTML = "Submit";
     } else {

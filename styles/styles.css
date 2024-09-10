@@ -2,6 +2,7 @@
     --primary-color: #2376FF;
     --secondary-color: #F8F8F8;
     --text-color: #333333;
+    --text-buttom-info: #8F8F8F;
     --background-color: #ffffff;
     --button-color: #F3AA50;
     --button-hover-color: #ff8c00;
@@ -21,6 +22,7 @@
     --gap-xl: 2rem;
     --gap-lg: 1.5rem;
     --gap-md: 1rem;
+    --gap-sm: 0.3rem;
     
     --padding: 4rem;
     --padding-small: 1.625rem;
@@ -28,7 +30,7 @@
     --small-radius: 2rem;
 
     --content-width: 65%;
-    --footer-width: 70%;
+    --footer-width: 80%;
 }
 
 .d-flex { display: flex; }
@@ -39,6 +41,7 @@
 .align-center { align-items: center; }
 
 .gap-1 { gap: 0.75rem; }
+.gap-sm { gap: var(--gap-sm); }
 .gap-md { gap: var(--gap-md); }
 .gap-lg { gap: var(--gap-lg); }
 .gap-xl { gap: var(--gap-xl); }
@@ -57,6 +60,9 @@
 .text-left { text-align: left; }
 .bg-white { background-color: #fff; }
 
+.line-height-p {line-height: 0.881rem;}
+.text-buttom-info { color: var(--text-buttom-info)}
+
 body {
     font-family: "Public Sans", sans-serif;
     background-color: var(--primary-color);
@@ -70,18 +76,20 @@ body {
     color: var(--text-color);
     min-height: 80vh;
     gap: var(--gap-xl);
-    padding: var(--padding) 0;
+    padding: 2rem 0;
     width: 100%;
 }
 
 .content {
     max-width: var(--content-width);
+    border-radius: 5px;
 }
 
 .content-details {
     padding: 40px 24px;
     background-color: var(--secondary-color);   
     width: 45%;
+    border-radius: 5px;
 }
 
 .content-details h1 {
@@ -92,10 +100,10 @@ body {
 
 .h1-decoration {
     background-color: var(--primary-color);
-    height: 5px;
-    width: 50px;
+    height: 4px;
+    width: 68px;
     border-radius: var(--small-radius);
-    margin: 0.75rem 0 1rem;
+    margin: 0.75rem 0 1rem 0;
 }
 
 p {
@@ -111,7 +119,7 @@ p {
 }
 
 .badges {
-    margin: 20px 0;
+    margin: 10px 0 20px 0;
     width: 342px;
 }
 
@@ -140,6 +148,11 @@ select {
     background-size: 16px 16px;
 }
 
+#age {
+    color: var(--text-color) ;
+    font-size: var(--font-size-lg)
+  }
+
 .radio-group div {
     display: flex;
     align-items: center;
@@ -147,7 +160,8 @@ select {
     width: 100%;
     gap: 16px;
     border-radius: 5px;
-    padding: 12px 24px;
+    padding: 10px 24px;
+    box-sizing: border-box;
 }
 
 .radio-group label {
@@ -189,6 +203,7 @@ button {
     color: #fff;
     cursor: pointer;
     font-weight: 700;
+    box-shadow: 0px 4px 20px 0px rgba(0, 24, 40, 0.2);
 }
 
 button:hover {
@@ -259,11 +274,17 @@ footer p {
     display: none;
 }
 
+.radio-style {
+    height: 16px;
+    width: 16px;
+}
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .container {
         padding-top: 32px;
         width: auto;
+        gap: var(--gap-xl);
     }
 
     .hide-mobile {
@@ -278,12 +299,14 @@ footer p {
 
     .content {
         flex-direction: column;
+        border-radius: 5px;
     }
 
     .content-details {
         padding: 2rem 1rem;
         gap: 2rem;
         width: fit-content;
+        border-radius: 5px;
     }
 
     .stepper-form {
@@ -304,12 +327,13 @@ footer p {
         padding: 1rem 0.75rem;
         gap: 1rem;
         background-color: #fff;
+        border-radius: 5px;
     }
 
     .content-details-bottom {
         height: auto;
         margin-top: 24px;
-        padding: 1rem;
+        padding: 0 1rem 1rem 1rem;
     }
 
     .content-details-bottom p {
@@ -319,32 +343,50 @@ footer p {
 }
 
 @media (max-width: 480px) {
+    p {
+        line-height: 1.322rem;
+    }
+
+    .mobile-p {
+        font-size: 18px !important;
+    }
+    
     body {
         width: 100vw;
         overflow-x: hidden;
     }
 
     .container {
-        padding-top: 32px;
+        padding-top: 40px;
         overflow-x: hidden;
+        gap: 40px
     }
 
     .content {
-        max-width: 100%;
-        margin: 16px;
+        max-width: 95vw;
         display: flex;
         align-self: center;
+        border-radius: 5px;
+    }
+
+    .step-container {
+        gap: 32px;
     }
 
     .content-details {
-        padding: 1rem 0.75rem;
+        padding: 1rem 0.75rem 0 0.75rem;
         gap: 1rem;
         background-color: #fff;
         width: fit-content;
+        border-radius: 5px;
     }
 
     .stepper-form {
-        padding: 2.5rem 1rem 0;
+        padding: 2rem 1rem 0;
+    }
+
+    .step-navigation {  
+        gap: 24px;
     }
 
     .h1-decoration {
@@ -360,7 +402,15 @@ footer p {
         overflow-x: hidden;
     }
 
-    .footer p {
-        width: 80%;
+    footer p {
+        width: 90%;
+    }
+
+    textarea {
+        height: 97px;
+    }
+
+    .mb-24 {
+        margin-bottom: 24px;
     }
 }
